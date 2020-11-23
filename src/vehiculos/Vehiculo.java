@@ -14,6 +14,10 @@ public class Vehiculo {
 		this.color = color;
 	}
 	
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
 	protected String getModelo() {
 //		return modelo == null ? MODELO_NO_DISPONIBLE : modelo;
 		return modelo;
@@ -31,7 +35,7 @@ public class Vehiculo {
 	public String toString() {
 		return (getModelo() == null ? MODELO_NO_DISPONIBLE : getModelo())
 //		return getModelo()
-				+ " (" + color + ") " + modelo;
+				+ " (" + color + ")";
 	}
 
 }

@@ -1,6 +1,6 @@
 package vehiculos;
 
-public class Coche extends Vehiculo {
+public class Coche extends VehiculoConRuedas {
 
 	private int numeroDeRuedas;
 	private String matricula;
@@ -50,7 +50,7 @@ public class Coche extends Vehiculo {
 
 	@Override
 	public String toString() {
-		return super.toString() + ", " + numeroDeRuedas + " ruedas";
+		return super.toString() + ", " + "matricula: " + matricula;
 	}
 
 	@Override
@@ -82,6 +82,11 @@ public class Coche extends Vehiculo {
 		} else if (!getModelo().equals(other.getModelo()))
 			return false;
 		return true;
+	}
+
+	@Override
+	public int getNumeroDeRuedas() {
+		return numeroDeRuedas;
 	}
 
 	
