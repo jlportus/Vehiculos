@@ -1,6 +1,6 @@
 package vehiculos;
 
-public class Coche extends VehiculoConRuedas {
+public class Coche extends VehiculoConRuedas implements Arrancable {
 
 	private int numeroDeRuedas;
 	private String matricula;
@@ -8,7 +8,7 @@ public class Coche extends VehiculoConRuedas {
 	public void setMatricula(String matricula) {
 		this.matricula = matricula;
 	}
-	
+
 	public Coche() {
 		this("Blanco");
 //		numeroDeRuedas = 4;
@@ -20,13 +20,13 @@ public class Coche extends VehiculoConRuedas {
 //		setColor(color); // como ya tengo el setter lo utilizo
 		this(null, color);
 	}
-	
+
 	public Coche(String modelo, String color) {
 //		super(modelo, color);
 //		numeroDeRuedas = 4;
 		this(modelo, color, 4);
 	}
-	
+
 	public Coche(String modelo, String color, int ruedas) {
 		super(modelo, color);
 		numeroDeRuedas = ruedas;
@@ -41,7 +41,7 @@ public class Coche extends VehiculoConRuedas {
 //		this.modelo = modelo;
 //		return this;
 //	}
-	
+
 //	public static Coche crearConModelo(String modelo) {
 //		Coche coche = new Coche();
 //		coche.modelo = modelo;
@@ -89,5 +89,15 @@ public class Coche extends VehiculoConRuedas {
 		return numeroDeRuedas;
 	}
 
-	
+	@Override
+	public void arrancar() {
+		System.out.println("bruummmm");
+	}
+
+	@Override
+	public void parar() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

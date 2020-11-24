@@ -18,4 +18,8 @@ public abstract class VehiculoConRuedas extends Vehiculo {
 								+ getNumeroDeRuedas() + " ruedas";
 		
 	}
+	
+	void arrancar() {
+		System.out.println("brum burmrmmm brummmm");
+	}
 }
