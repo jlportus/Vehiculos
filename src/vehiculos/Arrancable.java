@@ -6,5 +6,6 @@ public interface Arrancable {
 	
 	
 	
-	void parar();
+	default void parar() {
+	}
 }

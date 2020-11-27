@@ -1,6 +1,6 @@
 package vehiculos;
 
-public abstract class VehiculoConRuedas extends Vehiculo {
+public abstract class VehiculoConRuedas extends Vehiculo implements Arrancable {
 
 	public VehiculoConRuedas() {
 		super();
@@ -9,17 +9,16 @@ public abstract class VehiculoConRuedas extends Vehiculo {
 	public VehiculoConRuedas(String modelo, String color) {
 		super(modelo, color);
 	}
-	
+
 	public abstract int getNumeroDeRuedas();
-	
+
 	@Override
 	public String toString() {
-		return super.toString() + ", " +
-								+ getNumeroDeRuedas() + " ruedas";
-		
+		return super.toString() + ", " + +getNumeroDeRuedas() + " ruedas";
+
 	}
-	
-	void arrancar() {
+
+	public void arrancar() {
 		System.out.println("brum burmrmmm brummmm");
 	}
 }
